@@ -6,11 +6,11 @@
 <body><script>
 // GitHub Pages may serve this page from a 10-minute cache, but the tunnel URL changes on every restart:
 // ask the GitHub API (60 s cache) for the newest copy first; fall back to the URL baked in here.
-const baked = "https://ciao-cultures-dsl-you.trycloudflare.com", go = (u) => location.replace(u);
+const baked = "https://give-pipe-live-prophet.trycloudflare.com", go = (u) => location.replace(u);
 fetch("https://api.github.com/repos/makeamaw/coome/contents/index.html", { cache: "no-store", headers: { Accept: "application/vnd.github.raw" } })
   .then((r) => (r.ok ? r.text() : Promise.reject()))
   .then((t) => go((t.match(/https:\/\/[a-z0-9-]+\.trycloudflare\.com/) || [baked])[0]))
   .catch(() => go(baked));
 setTimeout(() => go(baked), 5000);
 </script>
-<a href="https://ciao-cultures-dsl-you.trycloudflare.com">COOME</a></body></html>
+<a href="https://give-pipe-live-prophet.trycloudflare.com">COOME</a></body></html>
